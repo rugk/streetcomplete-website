@@ -15,9 +15,8 @@ If you find a typo, a grammatical or spelling mistake feel free to fix it. Also 
   * `css`       - CSS files, which include things in `_sass`.
   * `fonts`     - Well... fonts.
   * `img`       - You guess it...
-  * `js`        - JavaScripts for my site, including libraries.
-
-<!-- * `pages/`      - The different pages of my site. -->
+  * `js`        - JavaScripts for the site, including libraries.
+* `pages/`      - The different pages of my site, localized in the given languages.
 
 Of course you can also edit this Markdown files.
 Write keys (in YAML for example) in camelCase for consistency.
@@ -33,7 +32,7 @@ When including a translation, always include the English fallback:
 {{ t.siteDescr | default: tfb.siteDescr }}
 ```
 
-<!-- If you want to translate a complete page go to `pages`, copy the existing file, adjust the front matter and translate it. -->
+If you want to translate a complete page go to `pages`, copy the existing file, adjust the front matter and translate it.
 
 ## Development
 
