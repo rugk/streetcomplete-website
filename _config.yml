@@ -19,6 +19,7 @@ encoding: utf-8
 externalmdlink: '{:target="_blank"}{:rel="noopener noreferrer"}' # for external links
 
 sass:
+  style: expanded
 #  style: compressed # for production
   sass_dir: assets/_sass
 
