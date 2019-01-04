@@ -16,7 +16,8 @@ If you find a typo, a grammatical or spelling mistake feel free to fix it. Also 
   * `fonts`     - Well... fonts.
   * `img`       - You guess it...
   * `js`        - JavaScripts for my site, including libraries.
-* `pages/`      - The different pages of my site, such as "Security" and "Speed"
+
+<!-- * `pages/`      - The different pages of my site. -->
 
 Of course you can also edit this Markdown files.
 Write keys (in YAML for example) in camelCase for consistency.
