@@ -1,0 +1,72 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+
+<!--!
+Copyright (C) 2019 rugk, ENT8R and contributors
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+{% assign tfb = site.data.locales.en.translation %}
+{% assign t = site.data.locales.[page.lang].translation %}
+
+<html lang="{{ page.lang | default: 'en' }}">
+
+    {% include head.html %}
+
+    <body class="{% if page.ref == 'index' %}indexpage{% endif %}">
+        {% include header.html %}
+
+        <main id="" class="page-content">
+            {% comment %}
+                Here we now parse the content another time to improve typography.
+                Thanks for https://www.sylvaindurand.org/improving-typography-on-jekyll/
+            {% endcomment %}
+
+            {% capture hide %}
+              {% assign content = content | split: '<pre' %}
+
+              {% for parts in content %}
+
+                {% assign part = parts | split: '</pre>' %}
+                {% assign code = part.first %}
+                {% assign text = part.last %}
+
+                {% if page.lang == 'de' %}
+                    {% comment %} Replace German quotation characters {% endcomment %}
+                    {% assign text = text
+                    | replace: '“', '„'
+                    | replace: '”', '“' %}
+                {% endif %}
+
+
+                {% if part.size == 2 %}
+
+                  {% capture output %}{{ output }}<pre{{ code }}</pre>{% endcapture %}
+
+                {% endif %}
+
+                {% capture output %}{{ output }}{{ text }}{% endcapture %}
+
+              {% endfor %}
+            {% endcapture %}{{ output }}
+        </main>
+
+        {% include footer.html %}
+
+    </body>
+
+</html>

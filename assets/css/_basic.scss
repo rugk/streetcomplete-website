@@ -1,0 +1,67 @@
+@charset 'utf-8';
+// contains global variables and mixins for scss, no css
+
+// adds license header to every css file
+/*!
+ * Copyright (C) 2019 rugk, ENT8R and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+// {% assign tfb = site.data.locales.en.translation %}
+
+// Our variables
+$base-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$small-font-size: $base-font-size * 0.875;
+$ratio-big-screen: 1.1;
+$base-line-height: 1.5;
+$spacing-unit: 30px;
+$background-color: rgba(27, 26, 26, 0.95);
+$grey-color: #919191;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 30%);
+$highlight-color: #62964B;
+$highlight-color-light: lighten($highlight-color, 40%);
+$highlight-color-dark: darken($highlight-color, 25%);
+$highlight-font-color: #2A4503;
+$highlight-font-color-light: lighten($highlight-font-color, 20%);
+$font-color-dark: rgb(0, 0, 0);
+$highlight-bk-color: #5BB669;
+$text-color: $grey-color-light;
+$brand-color: $highlight-color;
+$content-width: 900px;
+
+// basic mixins
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin media-query-2d($width, $height) {
+  @media screen and (max-width: $width), (max-height: $height) {
+    @content;
+  }
+}
+
+@mixin media-query-min($device) {
+  @media (min-width: $device) {
+    @content;
+  }
+}
+
+@import 'materialize/materialize';
