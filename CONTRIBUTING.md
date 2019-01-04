@@ -7,10 +7,8 @@ Nice you want to contribute. If you submit more than a few typo-fixes you can al
 If you find a typo, a grammatical or spelling mistake feel free to fix it. Also all other useful text changes are very appreciated. To find the text snippet you are looking for, here is a small overview over the structure of this repo:
 
 * `_data/`
-  * `locales`   - the translations/languages for my website
-  * `security`  - the different security ribbons displayed on each service
-  * `services`  - the list of services
-* `_includes/`  - HTML parts of my website. Here you can also find the `index.html`.
+  * `locales`   - the translations/languages for the website
+* `_includes/`  - HTML parts of the website. Here you can also find the `index.html`.
 * `_layouts`    - Layouts for different parts of the website.
 * `assets/`
   * `_sass`     - CSS snippets
@@ -23,7 +21,6 @@ If you find a typo, a grammatical or spelling mistake feel free to fix it. Also 
 Of course you can also edit this Markdown files.
 Write keys (in YAML for example) in camelCase for consistency.
 When adding PNG or JPG images, please compress them with services such as https://tinypng.com/ before.
-
 
 # Translating
 
