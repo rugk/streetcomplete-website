@@ -2,10 +2,6 @@
 ---
 {% include_relative _basic.scss %}
 
-.head {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-}
-
-@import 'roboto';
+@import
+  'header',
+  'roboto';
