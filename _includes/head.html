@@ -6,7 +6,7 @@
 
 	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ t.siteDescr | tfb.siteDescr }}{% endif %}">
-	<link type="text/plain" rel="author" href="{{ "/humans.txt" | prepend: site.baseurl }}" />
+	<link type="text/plain" rel="author" href="{{ "/humans.txt" | relative_url }}" />
 
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | replace:'index.en.html','' | replace:'index.de.html','' | prepend: site.baseurl | prepend: site.url }}">
 
