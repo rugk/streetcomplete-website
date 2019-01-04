@@ -5,6 +5,22 @@
         <div class="footer-wrapper">
     </div>
 
+	<ul class="footer-item langselector">
+        {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+        {% for post in posts %}
+            <li class="{{ post.lang }}">
+                <a href="{{ post.url }}">{{ post.lang }}</a>
+            </li>
+        {% endfor %}
+
+        {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+        {% for my_page in pages %}
+            <li class="{{ my_page.lang }}">
+                <a href="{{ my_page.url | relative_url }}" title="{{ site.data.locales[my_page.lang].language.locale }}">{{ my_page.lang }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
     <div class="footer-end">
 
     </div>
