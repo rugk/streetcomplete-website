@@ -24,13 +24,18 @@ Of course you can also edit this Markdown files.
 Write keys (in YAML for example) in camelCase for consistency.
 When adding PNG or JPG images, please compress them with services such as https://tinypng.com/ before.
 
-<!--
+
 # Translating
 
 Translations are saved in [`_data/locales`](_data/locales). You can use the English version [`en.yml`](_data/locales/en.xml) as a template. The used syntax is [Yaml](http://www.yaml.org/). Theoretically you could use a different syntax thanks to the fact that Jekyll parses many different ones, but for consistency I recommend to use only one.
 
-If you want to translate a complete page go to `pages`, copy the existing file, adjust the front matter and translate it.
--->
+The variable `t` contains the current translated strings.
+When including a translation, always include the English fallback:
+```liquid
+{{ t.siteDescr | default: tfb.siteDescr }}
+```
+
+<!-- If you want to translate a complete page go to `pages`, copy the existing file, adjust the front matter and translate it. -->
 
 ## Development
 

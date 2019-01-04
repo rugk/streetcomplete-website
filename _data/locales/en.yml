@@ -1,0 +1,15 @@
+# Some meta data about the translation
+meta:
+  author: rugk
+
+# some meta data about the language
+language:
+  short: en # using en-GB here
+  long: English
+  locale: English # the localized version of the language name (e.g. for German it is Deutsch)
+
+# now the translations
+translation:
+  # -- messages --
+  # welcome
+  welcomeTitleLong: 'Welcome to …!'

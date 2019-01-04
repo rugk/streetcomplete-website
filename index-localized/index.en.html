@@ -1,0 +1,10 @@
+---
+layout: default
+permalink: /en/
+lang: en
+ref: index
+---
+{% assign tfb = site.data.locales.en.translation %}
+{% assign t = site.data.locales[page.lang].translation %}
+
+{% include index.html %}

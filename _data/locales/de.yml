@@ -1,0 +1,16 @@
+# Some meta data about the translation
+meta:
+  author: rugk
+
+# some meta data about the language
+language:
+  short: de
+  long: German
+  locale: Deutsch
+
+# now the translations
+translation:
+  # -- messages --
+  # welcome
+  welcomeTitleLong: 'Willkommen bei …!'
+  # -- service list in general --
